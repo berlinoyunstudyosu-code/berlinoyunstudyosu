@@ -9,7 +9,7 @@ export function Hero({ ticketUrl }: { ticketUrl?: string }) {
       <div className="shell hero-content">
         <p className="eyebrow hero-eyebrow">BERLİN&apos;DE TÜRKÇE DOĞAÇLAMA KOMEDİ</p>
         <h1 id="hero-title"><span>Sen söyle.</span><span>Biz oynayalım.</span></h1>
-        <p className="hero-copy">Seyirciden bir kelime, sahnede o anda doğan hikâyeler. Öner Erkan, Pınar Göktaş ve Berlin Oyun Stüdyosu ekibiyle her gösteri tek seferlik.</p>
+        <p className="hero-copy">Seyirciden bir kelime, sahnede o anda doğan hikâyeler. Berlin Oyun Stüdyosu ekibiyle her gösteri tek seferlik.</p>
         <div className="button-row">
           {ticketUrl ? <a className="button" href={ticketUrl} target="_blank" rel="noopener noreferrer">19 Eylül Gösterisi <span aria-hidden="true">↗</span></a> : null}
           <a className="button button--ghost" href="#kurumsal">Kurumsal Etkinlikler</a>
