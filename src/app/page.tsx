@@ -9,10 +9,12 @@ import { Partners } from "@/components/Partners";
 import { Players } from "@/components/Players";
 import { UpcomingShows } from "@/components/UpcomingShows";
 import { siteConfig } from "@/content/site";
-import { getUpcomingEvents } from "@/lib/events";
+import { getPastEvents, getUpcomingEvents } from "@/lib/events";
 
 export default function Home() {
-  const events = getUpcomingEvents(siteConfig.events);
+  const now = new Date();
+  const events = getUpcomingEvents(siteConfig.events, now);
+  const pastEvents = getPastEvents(siteConfig.events, now);
   const event = events[0];
   const structuredData = [
     {
@@ -62,7 +64,7 @@ export default function Home() {
       <Header ticketUrl={event?.ticketUrl} />
       <main id="ana-icerik">
         <Hero ticketUrl={event?.ticketUrl} />
-        <UpcomingShows events={events} />
+        <UpcomingShows events={events} pastEvents={pastEvents} />
         <About />
         <Players />
         <Corporate />

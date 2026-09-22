@@ -93,6 +93,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .event-details { font-size: .95rem; }
 .event-details p { margin: 3px 0; }
 .event-note { margin-top: 12px !important; color: #76501e; font-weight: 700; }
+.events-list { display: grid; gap: 20px; }
+.past-shows { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--dark-line); }
+.past-shows-heading h2 { margin: 0 0 8px; font-family: var(--display); font-size: clamp(1.4rem, 2.5vw, 1.8rem); letter-spacing: -.03em; }
+.past-shows-heading p, .past-shows-empty { color: #62625c; font-size: .95rem; }
+.past-shows-heading p { margin: 0 0 24px; }
+.past-event-card { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--dark-line); }
+.past-event-card time { color: #62625c; font-size: .9rem; }
+.past-event-card h3 { margin: 0 0 6px; font-family: var(--display); font-size: 1.15rem; line-height: 1.35; }
+.past-event-card p { margin: 0; color: #62625c; font-size: .9rem; }
+.past-event-status { justify-self: start; padding: 5px 10px; border: 1px solid var(--dark-line); border-radius: 999px; color: #62625c; font-size: .75rem; }
+@media (max-width: 700px) {
+  .past-event-card { grid-template-columns: 1fr; gap: 12px; }
+}
 .empty-state { padding: 54px; border: 1px solid var(--dark-line); border-radius: 18px; }
 .empty-state h3 { margin: 0 0 8px; font-family: var(--display); font-size: 2rem; }
 .empty-state p { margin: 0; }
