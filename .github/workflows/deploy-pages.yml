@@ -39,9 +39,9 @@ jobs:
 
       - name: Build static site
         run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - name: Verify custom domain
+        run: test "$(cat out/CNAME)" = "berlinoyunstudyosu.com"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

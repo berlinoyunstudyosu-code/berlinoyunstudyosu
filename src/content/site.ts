@@ -20,13 +20,11 @@ export type Player = {
 };
 export type Partner = { name: string; logo: string; url?: string };
 
-const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-export const basePath = configuredBasePath === "/" ? "" : configuredBasePath.replace(/\/$/, "");
-export const withBasePath = (path: string) => `${basePath}${path.startsWith("/") ? path : `/${path}`}`;
+export const withBasePath = (path: string) => path.startsWith("/") ? path : `/${path}`;
 
 export const siteConfig = {
   name: "Berlin Oyun Stüdyosu",
-  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://berlinoyunstudyosu.de").replace(/\/$/, ""),
+  siteUrl: "https://berlinoyunstudyosu.com",
   description:
     "Öner Erkan, Pınar Göktaş ve Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
   instagram: {

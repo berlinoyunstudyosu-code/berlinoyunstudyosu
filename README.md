@@ -33,14 +33,14 @@ Tüm temel içerik ve bağlantılar `src/content/site.ts` dosyasındadır.
 
 ### GitHub Pages
 
-Proje, `.github/workflows/deploy-pages.yml` üzerinden GitHub Pages'e otomatik olarak yayınlanmaya hazırdır. Workflow hem `kullaniciadi.github.io/repo-adi/` alt yolunu hem de GitHub Pages'e tanımlanan özel domaini otomatik algılar.
+Proje, `.github/workflows/deploy-pages.yml` üzerinden GitHub Pages'e, `https://berlinoyunstudyosu.com` özel domaininin kök dizinine yayınlanır.
 
 1. Projeyi GitHub'da bir repository'ye gönderin. Varsayılan branch `main` olmalıdır.
 2. Repository'de **Settings → Pages → Build and deployment → Source** alanından **GitHub Actions** seçin.
 3. `main` branch'ine push yapın veya **Actions → Deploy Next.js site to GitHub Pages → Run workflow** ile elle çalıştırın.
 4. Workflow tamamlandığında yayın adresi deployment özetinde görünür.
 
-Build sırasında `actions/configure-pages`, sitenin doğru `base_path` ve `base_url` değerlerini sağlar. Böylece görseller, JavaScript/CSS dosyaları, canonical adresler, sitemap ve robots dosyaları repository alt yolunda da doğru çalışır. `public/.nojekyll`, Next.js'in `_next` klasörünün GitHub Pages tarafından eksiksiz servis edilmesini sağlar.
+Next.js `basePath` ve `assetPrefix` kullanmaz; tüm yerel asset yolları `/` kökünden başlar. Canonical, sosyal paylaşım, sitemap ve robots adresleri `siteConfig.siteUrl` içindeki `https://berlinoyunstudyosu.com` adresini kullanır. `public/CNAME` build sırasında `out/CNAME` olarak kopyalanır ve workflow bu dosyayı doğrulayıp `out/` klasörünü olduğu gibi yayınlar. `public/.nojekyll`, Next.js'in `_next` klasörünün GitHub Pages tarafından eksiksiz servis edilmesini sağlar.
 
 Workflow `main` branch'ini izler. Farklı bir varsayılan branch kullanılıyorsa `.github/workflows/deploy-pages.yml` içindeki branch adını değiştirin.
 
