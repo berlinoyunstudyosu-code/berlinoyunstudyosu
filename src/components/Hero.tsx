@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { withBasePath } from "@/content/site";
+import { withBasePath, type EventItem } from "@/content/site";
+import { formatEventDate, formatEventTime } from "@/lib/events";
 
-export function Hero({ ticketUrl }: { ticketUrl?: string }) {
+export function Hero({ event }: { event?: EventItem }) {
   return (
     <section className="hero" aria-labelledby="hero-title">
       <Image className="hero-image" src={withBasePath("/images/hero-stage.png")} fill sizes="100vw" priority quality={92} alt="Spot ışığı altında boş mikrofon ve sahne" />
@@ -12,11 +13,11 @@ export function Hero({ ticketUrl }: { ticketUrl?: string }) {
         <p className="hero-copy">O anda doğan, bir daha tekrarlanmayacak Türkçe komedi.</p>
         <p className="hero-proof">Berlin Oyun Stüdyosu</p>
         <div className="button-row">
-          {ticketUrl ? <a className="button" href={ticketUrl} target="_blank" rel="noopener noreferrer">19 Eylül gecesine katıl <span aria-hidden="true">↗</span></a> : null}
+          {event ? <a className="button" href={event.ticketUrl || "#gosteriler"} target={event.ticketUrl ? "_blank" : undefined} rel={event.ticketUrl ? "noopener noreferrer" : undefined}>{formatEventDate(event.date)} gecesine katıl <span aria-hidden="true">↗</span></a> : null}
         </div>
       </div>
       <div className="shell hero-meta" aria-label="Gösteri özeti">
-        <span>19 EYLÜL · 20:00</span><i aria-hidden="true" /><span>KREUZBERG</span><i aria-hidden="true" /><span>BİLETLER BAĞIŞ USULÜ</span>
+        <span>{event ? `${formatEventDate(event.date).toLocaleUpperCase("tr-TR")} · ${formatEventTime(event.date)}` : "YENİ GÖSTERİLER ÇOK YAKINDA"}</span><i aria-hidden="true" /><span>KREUZBERG</span><i aria-hidden="true" /><span>BİLETLER BAĞIŞ USULÜ</span>
       </div>
     </section>
   );

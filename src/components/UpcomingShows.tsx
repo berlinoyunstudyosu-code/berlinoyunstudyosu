@@ -14,7 +14,7 @@ export function UpcomingShows({ events, pastEvents }: { events: readonly EventIt
                 <time dateTime={event.date} className="date-badge">{event.badge}</time>
                 <div className="event-main"><p className="card-kicker">CANLI · TEK SEFERLİK</p><h3>{event.title}</h3></div>
                 <div className="event-details"><p>{event.timeLabel}</p><p>{event.location}</p><p className="event-note">{event.note}</p></div>
-                <a className="button button--dark" href={event.ticketUrl} target="_blank" rel="noopener noreferrer">Biletini ayır <span aria-hidden="true">↗</span></a>
+                {event.ticketUrl ? <a className="button button--dark" href={event.ticketUrl} target="_blank" rel="noopener noreferrer">Biletini ayır <span aria-hidden="true">↗</span></a> : <p>Bilet bağlantısı yakında.</p>}
               </article>
             ))}
           </div>

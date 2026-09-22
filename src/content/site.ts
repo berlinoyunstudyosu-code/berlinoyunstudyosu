@@ -31,8 +31,7 @@ export const siteConfig = {
     label: "@berlinoyunstudyosu",
     url: "https://www.instagram.com/berlinoyunstudyosu/",
   },
-  // TODO: yayın öncesi gerçek e-posta ile değiştir
-  email: "iletisim@berlinoyunstudyosu.de",
+  email: "iletisim@berlinoyunstudyosu.com",
   nav: [
     { label: "Gösteriler", href: "#gosteriler" },
     { label: "Biz Kimiz?", href: "#biz-kimiz" },
@@ -41,6 +40,18 @@ export const siteConfig = {
     { label: "İletişim", href: "#iletisim" },
   ] satisfies NavItem[],
   events: [
+    {
+      id: "turkce-dogaclama-2026-09-26",
+      date: "2026-09-26T20:00:00+02:00",
+      badge: "26 / EYL",
+      title: "Berlin'de Türkçe Doğaçlama Komedi",
+      timeLabel: "Cumartesi · 20:00",
+      location: "Naunynstraße 63 · Kreuzberg",
+      note: "Biletler bağış usulü",
+      ticketUrl: "https://www.yesticket.org/",
+      description:
+        "Seyircinin fikirleriyle o anda doğan Türkçe doğaçlama komedi gösterisi. Biletler bağış usulü.",
+    },
     {
       id: "turkce-dogaclama-2026-09-19",
       date: "2026-09-19T20:00:00+02:00",
@@ -122,16 +133,16 @@ export const siteConfig = {
       bio: "",
     },
     {
-      name: "Yelda",
+      name: "Yelda Gulsoy",
       slug: "yelda",
-      initials: "Y",
+      initials: "YG",
       image: "/images/players/yelda.webp",
       bio: "",
     },
     {
-      name: "Gizem",
+      name: "Gizem Kilic",
       slug: "gizem",
-      initials: "G",
+      initials: "GK",
       image: "/images/players/gizem.webp",
       bio: "",
     },

@@ -52,7 +52,7 @@ export default function Home() {
               name: siteConfig.name,
               url: siteConfig.siteUrl,
             },
-            offers: { "@type": "Offer", url: event.ticketUrl, availability: "https://schema.org/InStock" },
+            ...(event.ticketUrl ? { offers: { "@type": "Offer", url: event.ticketUrl, availability: "https://schema.org/InStock" } } : {}),
           },
         ]
       : []),
@@ -63,7 +63,7 @@ export default function Home() {
       <a className="skip-link" href="#ana-icerik">İçeriğe geç</a>
       <Header ticketUrl={event?.ticketUrl} />
       <main id="ana-icerik">
-        <Hero ticketUrl={event?.ticketUrl} />
+        <Hero event={event} />
         <UpcomingShows events={events} pastEvents={pastEvents} />
         <About />
         <Players />
@@ -72,7 +72,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      {event ? <MobileTicketBar ticketUrl={event.ticketUrl} /> : null}
+      {event?.ticketUrl ? <MobileTicketBar ticketUrl={event.ticketUrl} date={event.date} /> : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
