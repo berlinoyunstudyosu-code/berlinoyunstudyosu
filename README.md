@@ -46,6 +46,21 @@ Workflow `main` branch'ini izler. Farklı bir varsayılan branch kullanılıyors
 
 Alternatif olarak Vercel veya statik site barındıran başka bir servis de kullanılabilir. Yayınlamadan önce production domainini doğrulayın.
 
+## PostHog
+
+Entegrasyon, [PostHog'un resmî Next.js rehberindeki](https://posthog.com/docs/libraries/next-js) `instrumentation-client.ts` yaklaşımını kullanır. `src/instrumentation-client.ts`, tarayıcı SDK'sını başlatır; sayfa görüntülemeleri ve otomatik etkileşim takibi SDK üzerinden çalışır. Oturum açma olmadığı için ziyaretçiler anonim kimlikleriyle takip edilir.
+
+Yerel kurulum:
+
+1. `.env.example` dosyasını `.env.local` olarak kopyalayın.
+2. PostHog proje ayarlarındaki **Project token** değerini `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` alanına yazın. Personal API key kullanmayın.
+3. Projenin ingestion host adresini `NEXT_PUBLIC_POSTHOG_HOST` alanına yazın: EU için `https://eu.i.posthog.com`, US için `https://us.i.posthog.com`.
+4. `npm run dev` komutunu yeniden başlatıp siteyi ziyaret edin. PostHog'daki aktivite ekranında `$pageview` ve tıklamalardan gelen `$autocapture` olaylarını kontrol edin.
+
+GitHub Pages için aynı iki değeri repository **Settings → Secrets and variables → Actions → Variables** altında ekleyin. Workflow bunları build sırasında tarayıcı paketine yerleştirir; değerler değiştiğinde yeniden build/deploy gerekir. Bu değerler tarayıcıya açıktır. İki değerden biri boşsa SDK başlatılmaz.
+
+Site statik olarak yayınlandığı için sunucu SDK'sı veya Next.js reverse proxy kullanılmaz; tarayıcı doğrudan yapılandırılan PostHog host'una bağlanır. Tarayıcıdaki takip engelleyicilerinin veri gönderimini engelleyebileceğini doğrulama sırasında dikkate alın.
+
 ## Yayın öncesi checklist
 
 - [ ] Geçici iletişim e-postasını gerçek kurumsal e-posta ile değiştirin.
@@ -54,4 +69,4 @@ Alternatif olarak Vercel veya statik site barındıran başka bir servis de kull
 - [ ] Öner Erkan ve Pınar Göktaş isim/fotoğraf kullanım onaylarını alın.
 - [ ] Etkinlik tarihi, mekânı ve YesTicket bağlantısını doğrulayın.
 - [ ] Impressum ve Datenschutz için gerçek hukuki metinleri hukuk danışmanıyla tamamlayın.
-- [ ] Analytics eklenecekse gerekli cookie consent çözümünü de ekleyin. Varsayılan projede analytics yoktur.
+- [ ] Analytics için gerekli cookie consent çözümünü tamamlayın.
