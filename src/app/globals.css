@@ -137,6 +137,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .split-grid { display: grid; gap: 54px; align-items: center; }
 .media-frame { position: relative; min-height: 440px; overflow: hidden; border-radius: 18px; background: #d9c5a6; }
 .media-frame img { object-fit: cover; object-position: 60% center; }
+.media-frame.media-frame--team { min-height: 0; aspect-ratio: 4 / 3; align-self: center; }
+.media-frame--team img { object-position: center; }
 .media-frame--dark { background: var(--ink-soft); }
 .media-frame--dark img { object-position: 58% center; }
 .image-label { position: absolute; bottom: 18px; left: 18px; padding: 8px 12px; color: var(--paper); background: var(--ink); font-family: var(--display); font-size: .66rem; font-weight: 700; letter-spacing: .13em; }

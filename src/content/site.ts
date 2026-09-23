@@ -46,9 +46,9 @@ export const siteConfig = {
       badge: "26 / EYL",
       title: "Berlin'de Türkçe Doğaçlama Komedi",
       timeLabel: "Cumartesi · 20:00",
-      location: "Naunynstraße 63 · Kreuzberg",
+      location: "Kreuzberg · Naunynstraße 63, 10997 Berlin",
       note: "Biletler bağış usulü",
-      ticketUrl: "https://www.yesticket.org/",
+      ticketUrl: "https://www.yesticket.org/event/en/berlinde-tuerke-doalama-komedi-26-09-26/",
       description:
         "Seyircinin fikirleriyle o anda doğan Türkçe doğaçlama komedi gösterisi. Biletler bağış usulü.",
     },
@@ -84,18 +84,18 @@ export const siteConfig = {
       bio: "Oyunculuk deneyimini güçlü karakterler, keskin gözlem ve sahnedeki anlık oyunla buluşturuyor.",
     },
     {
-      name: "Okan Çetin",
-      slug: "okan-cetin",
-      initials: "OÇ",
-      image: "/images/players/okan-cetin.webp",
-      bio: "Doğaçlamada merakın ve ekip oyunundaki sürprizlerin peşinden gidiyor.",
-    },
-    {
       name: "Emir Akköse",
       slug: "emir-akkose",
       initials: "EA",
       image: "/images/players/emir-akkose.webp",
       bio: "Yüksek enerjisi ve anlık hikâye kurma refleksiyle sahnenin yönünü değiştirmeyi seviyor.",
+    },
+    {
+      name: "Okan Çetin",
+      slug: "okan-cetin",
+      initials: "OÇ",
+      image: "/images/players/okan-cetin.webp",
+      bio: "Doğaçlamada merakın ve ekip oyunundaki sürprizlerin peşinden gidiyor.",
     },
     {
       name: "Yücel Çeşmeli",

@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Berlin Oyun Stüdyosu | Berlin'de Türkçe Doğaçlama Komedi",
   description: siteConfig.description,
   alternates: { canonical: siteConfig.siteUrl },
+  icons: {
+    icon: { url: "/images/berlin-oyun-studyosu-logo.png", type: "image/png" },
+    apple: "/images/berlin-oyun-studyosu-logo.png",
+  },
   openGraph: {
     title: "Berlin Oyun Stüdyosu | Berlin'de Türkçe Doğaçlama Komedi",
     description: siteConfig.description,

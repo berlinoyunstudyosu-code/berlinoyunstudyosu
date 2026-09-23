@@ -42,6 +42,7 @@ export default function Home() {
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Naunynstraße 63",
+                postalCode: "10997",
                 addressLocality: "Berlin",
                 addressCountry: "DE",
               },

@@ -13,8 +13,8 @@ export function Corporate() {
   return (
     <section id="kurumsal" className="section paper-section split-section">
       <div className="shell split-grid">
-        <div className="media-frame reveal">
-          <Image src={withBasePath("/images/corporate-workshop.png")} fill sizes="(min-width: 900px) 50vw, 100vw" quality={90} alt="Birlikte doğaçlama çalışması yapan ekip" />
+        <div className="media-frame media-frame--team reveal">
+          <Image src={withBasePath("/images/team.jpeg")} fill sizes="(min-width: 960px) 50vw, 100vw" quality={90} alt="Berlin Oyun Stüdyosu ekibi seyircilerin önünde doğaçlama yaparken" />
           <span className="image-label">BİRLİKTE / ŞİMDİ</span>
         </div>
         <div className="split-copy reveal">
