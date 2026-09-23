@@ -160,15 +160,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-links span { grid-column: 1 / -1; color: var(--amber); font-size: .66rem; font-weight: 800; letter-spacing: .14em; }
 .contact-links strong { overflow-wrap: anywhere; font-family: var(--display); font-size: clamp(.92rem, 2.4vw, 1.2rem); }
 .contact-links i { color: var(--amber); font-style: normal; }
-.contact-form { padding: clamp(24px, 5vw, 44px); border: 1px solid var(--line); border-radius: 18px; background: var(--ink); }
-.field { margin-bottom: 22px; }
-.field label { display: block; margin-bottom: 8px; color: #d9dbdc; font-size: .8rem; font-weight: 700; }
-.field input, .field select, .field textarea { width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.24); border-radius: 4px; color: var(--paper); background: var(--ink-soft); }
-.field textarea { resize: vertical; }
-.field select { color-scheme: dark; }
-.field [aria-invalid="true"] { border-color: #ef9b8f; }
-.field-error { margin: 7px 0 0; color: #ffb7ad; font-size: .8rem; }
-.form-note { margin: 14px 0 0; color: var(--muted); font-size: .74rem; }
 
 .site-footer { padding: 64px 0 110px; border-top: 1px solid var(--line); background: var(--ink); }
 .footer-grid { display: grid; gap: 44px; }
@@ -200,7 +191,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .players-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
   .player-card { grid-column: span 2; min-height: 440px; }
   .player-card--featured { grid-column: span 3; min-height: 520px; }
-  .contact-grid { grid-template-columns: .9fr 1.1fr; }
   .footer-grid { grid-template-columns: 1.6fr .7fr 1fr; }
   .event-card { grid-template-columns: auto minmax(230px, 1.45fr) 1fr auto; }
 }

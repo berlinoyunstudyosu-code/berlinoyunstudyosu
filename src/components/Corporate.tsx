@@ -22,7 +22,7 @@ export function Corporate() {
           <h2>Ekibiniz için sahnede yeni bir alan açın.</h2>
           <p>Şirketiniz için özel doğaçlama gösterileri ve workshoplar. İletişim, spontanlık, birlikte üretme ve güveni eğlenceli, katılımcı bir formatta deneyimleyin.</p>
           <ul>{items.map((item) => <li key={item}><span aria-hidden="true">+</span>{item}</li>)}</ul>
-          <ContactLink className="button button--dark" subject="Corporate Event">Kurumsal etkinliği konuşalım <span aria-hidden="true">→</span></ContactLink>
+          <ContactLink className="button button--dark">Kurumsal etkinliği konuşalım <span aria-hidden="true">→</span></ContactLink>
         </div>
       </div>
     </section>
