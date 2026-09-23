@@ -26,7 +26,7 @@ export const siteConfig = {
   name: "Berlin Oyun Stüdyosu",
   siteUrl: "https://berlinoyunstudyosu.com",
   description:
-    "Öner Erkan, Pınar Göktaş ve Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
+    "Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy ve Gizem Kilic'ten oluşan Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
   instagram: {
     label: "@berlinoyunstudyosu",
     url: "https://www.instagram.com/berlinoyunstudyosu/",
