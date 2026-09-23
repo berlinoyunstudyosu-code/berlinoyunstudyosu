@@ -26,7 +26,7 @@ export const siteConfig = {
   name: "Berlin Oyun Stüdyosu",
   siteUrl: "https://berlinoyunstudyosu.com",
   description:
-    "Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy ve Gizem Kilic'ten oluşan Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
+    "Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic ve Kaan Songun'dan oluşan Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
   instagram: {
     label: "@berlinoyunstudyosu",
     url: "https://www.instagram.com/berlinoyunstudyosu/",
@@ -144,6 +144,13 @@ export const siteConfig = {
       slug: "gizem",
       initials: "GK",
       image: "/images/players/gizem.webp",
+      bio: "",
+    },
+    {
+      name: "Kaan Songun",
+      slug: "kaan-songun",
+      initials: "KS",
+      image: "/images/players/kaan-songun.webp",
       bio: "",
     },
   ] satisfies Player[],
