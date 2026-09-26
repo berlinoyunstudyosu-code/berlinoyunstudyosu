@@ -27,6 +27,7 @@ Tüm temel içerik ve bağlantılar `src/content/site.ts` dosyasındadır.
 - Etkinlik eklemek veya güncellemek için `events` dizisini düzenleyin. Tarihi ISO 8601 ve Berlin saat dilimiyle yazın (ör. `2026-09-19T20:00:00+02:00`). Geçmiş etkinlikler otomatik olarak yaklaşan gösterilerden çıkarılır.
 - İletişim e-postasını `email`, canonical domaini `siteUrl` alanından güncelleyin.
 - Oyuncu fotoğraflarını `public/images/players/{slug}.webp` yoluna ekleyin. Önerilen oran `4:5`, minimum boyut `1200×1500 px`, format WebP. Fotoğraf yoksa monogramlı fallback otomatik gösterilir.
+- Gösteri fotoğrafları `siteConfig.showPhotos` dizisindedir; ilk fotoğraf galeride büyük gösterilir. Her fotoğraf için `public/images/shows/{slug}-{640,1280,2048}.webp` dosyalarını 4:3 oranında hazırlayın; `caption` kısa başlık, `alt` görsel açıklamasıdır. Galeri takvimin ardından yer alır; fotoğraflar tıklanınca tam açılır, ok tuşlarıyla gezilir ve Escape ile kapanır.
 - Partner logoları için `siteConfig` içinde ileride doldurulabilecek bir veri dizisi kullanılmalı; doğrulanmamış logo eklemeyin.
 
 ## Yayınlama

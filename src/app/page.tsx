@@ -4,6 +4,7 @@ import { Corporate } from "@/components/Corporate";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { ShowGallery } from "@/components/ShowGallery";
 import { MobileTicketBar } from "@/components/MobileTicketBar";
 import { Partners } from "@/components/Partners";
 import { Players } from "@/components/Players";
@@ -66,6 +67,7 @@ export default function Home() {
       <main id="ana-icerik">
         <Hero event={event} />
         <UpcomingShows events={events} pastEvents={pastEvents} />
+        <ShowGallery />
         <About />
         <Players />
         <Corporate />

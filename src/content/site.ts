@@ -34,6 +34,7 @@ export const siteConfig = {
   email: "iletisim@berlinoyunstudyosu.com",
   nav: [
     { label: "Gösteriler", href: "#gosteriler" },
+    { label: "Sahneden", href: "#sahneden" },
     { label: "Biz Kimiz?", href: "#biz-kimiz" },
     { label: "Oyuncular", href: "#oyuncular" },
     { label: "Kurumsal", href: "#kurumsal" },
@@ -65,6 +66,13 @@ export const siteConfig = {
         "Seyircinin fikirleriyle o anda doğan Türkçe doğaçlama komedi gösterisi. Biletler bağış usulü.",
     },
   ] satisfies EventItem[],
+  showPhotos: [
+    { slug: "seyirciyle-ic-ice", caption: "Seyirciyle iç içe", alt: "Seyircilerin hemen önünde farklı ifadelerle doğaçlama yapan oyuncular" },
+    { slug: "sahnede-dogaclama", caption: "Bir fikir, yeni bir sahne", alt: "Siyah perde önünde el hareketleriyle bir sahne canlandıran beş oyuncu" },
+    { slug: "birlikte-oynarken", caption: "O anda, birlikte", alt: "Sahnede birbirlerinin oyununa karşılık veren doğaçlama ekibi" },
+    { slug: "salondan-bir-an", caption: "Salonun içinden", alt: "Seyirci sıralarının arkasından görünen aydınlatılmış sahne ve oyuncular" },
+    { slug: "sahne-ve-seyirci", caption: "Aynı gecenin parçası", alt: "Dolu salonda sahneyi izleyen seyirciler ve birlikte duran beş oyuncu" },
+  ],
   partners: [] as Partner[],
   players: [
     {
