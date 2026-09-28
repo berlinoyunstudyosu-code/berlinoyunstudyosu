@@ -161,7 +161,8 @@ export const siteConfig = {
       slug: "yelda",
       initials: "YG",
       image: "/images/players/yelda.webp",
-      bio: "",
+      bio: "Yelda Gülsoy, doğaçlama tiyatro alanında çalışan bir tiyatro sanatçısı ve eğitmendir. 2011 yılından bu yana kendini doğaçlama tiyatroya adamış. Türkiye’de YOTA doğaçlama tiyatro topluluğunun bir parçası olarak sahne almıştır. Doğaçlama tiyatro gösterilerinin yanı sıra, şirket ve kurumlara yönelik doğaçlama tiyatro atölyeleri ve özel gösteriler gerçekleştirmektedir. Berlin’de Notausgang Improtheater, Play and Work, F*Impro, 6 Frauen, Berlin Oyun Stüdyosu ve 90+ Improv topluluklarında Türkçe ve Almanca olarak sahne almaktadır.",
+      showBio: true,
     },
     {
       name: "Gizem Kilic",
