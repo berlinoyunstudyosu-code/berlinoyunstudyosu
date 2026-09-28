@@ -9,10 +9,12 @@ import { MobileTicketBar } from "@/components/MobileTicketBar";
 import { Partners } from "@/components/Partners";
 import { Players } from "@/components/Players";
 import { UpcomingShows } from "@/components/UpcomingShows";
-import { siteConfig } from "@/content/site";
+import { localizedSite, localePath, translator, type LocaleProps } from "@/content/i18n";
 import { getPastEvents, getUpcomingEvents } from "@/lib/events";
 
-export default function Home() {
+export function HomePage({ locale }: LocaleProps) {
+  const siteConfig = localizedSite(locale);
+  const t = translator(locale);
   const now = new Date();
   const events = getUpcomingEvents(siteConfig.events, now);
   const pastEvents = getPastEvents(siteConfig.events, now);
@@ -22,7 +24,7 @@ export default function Home() {
       "@context": "https://schema.org",
       "@type": "PerformingGroup",
       name: siteConfig.name,
-      url: siteConfig.siteUrl,
+      url: `${siteConfig.siteUrl}${localePath(locale)}`,
       logo: `${siteConfig.siteUrl}/images/berlin-oyun-studyosu-logo.png`,
       sameAs: [siteConfig.instagram.url],
       description: siteConfig.description,
@@ -52,7 +54,7 @@ export default function Home() {
             organizer: {
               "@type": "PerformingGroup",
               name: siteConfig.name,
-              url: siteConfig.siteUrl,
+              url: `${siteConfig.siteUrl}${localePath(locale)}`,
             },
             ...(event.ticketUrl ? { offers: { "@type": "Offer", url: event.ticketUrl, availability: "https://schema.org/InStock" } } : {}),
           },
@@ -62,20 +64,20 @@ export default function Home() {
 
   return (
     <>
-      <a className="skip-link" href="#ana-icerik">İçeriğe geç</a>
-      <Header ticketUrl={event?.ticketUrl} />
+      <a className="skip-link" href="#ana-icerik">{t("İçeriğe geç")}</a>
+      <Header locale={locale} ticketUrl={event?.ticketUrl} />
       <main id="ana-icerik">
-        <Hero event={event} />
-        <UpcomingShows events={events} pastEvents={pastEvents} />
-        <ShowGallery />
-        <About />
-        <Players />
-        <Corporate />
-        <Partners />
-        <Contact />
+        <Hero locale={locale} event={event} />
+        <UpcomingShows locale={locale} events={events} pastEvents={pastEvents} />
+        <ShowGallery locale={locale} />
+        <About locale={locale} />
+        <Players locale={locale} />
+        <Corporate locale={locale} />
+        <Partners locale={locale} />
+        <Contact locale={locale} />
       </main>
-      <Footer />
-      {event?.ticketUrl ? <MobileTicketBar ticketUrl={event.ticketUrl} date={event.date} /> : null}
+      <Footer locale={locale} />
+      {event?.ticketUrl ? <MobileTicketBar locale={locale} ticketUrl={event.ticketUrl} date={event.date} /> : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}

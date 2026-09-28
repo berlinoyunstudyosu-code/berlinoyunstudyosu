@@ -1,10 +1,15 @@
 "use client";
 
+import { translator, localizedSite, type LocaleProps } from "@/content/i18n";
+
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { siteConfig, withBasePath } from "@/content/site";
+import { withBasePath } from "@/content/site";
 
-export function Header({ ticketUrl }: { ticketUrl?: string }) {
+export function Header({ ticketUrl, locale }: { ticketUrl?: string } & LocaleProps) {
+  const t = translator(locale);
+  const siteConfig = localizedSite(locale);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -40,21 +45,24 @@ export function Header({ ticketUrl }: { ticketUrl?: string }) {
   return (
     <header className={`site-header ${scrolled || open ? "site-header--solid" : ""}`}>
       <div className="header-inner">
-        <a href="#ana-icerik" className="brand" aria-label="Berlin Oyun Stüdyosu ana sayfa">
+        <a href="#ana-icerik" className="brand" aria-label={t("Berlin Oyun Stüdyosu ana sayfa")}>
           <Image src={withBasePath("/images/berlin-oyun-studyosu-logo.png")} width={718} height={712} sizes="64px" priority alt="Berlin Oyun Stüdyosu" />
         </a>
-        <nav className="desktop-nav" aria-label="Ana navigasyon">
+        <nav className="desktop-nav" aria-label={t("Ana navigasyon")}>
           {siteConfig.nav.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
-          {ticketUrl ? <a className="button button--small" href={ticketUrl} target="_blank" rel="noopener noreferrer">Biletini Ayır</a> : null}
+          {ticketUrl ? <a className="button button--small" href={ticketUrl} target="_blank" rel="noopener noreferrer">{t("Biletini Ayır")}</a> : null}
         </nav>
-        <button ref={buttonRef} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Menüyü kapat" : "Menüyü aç"} onClick={() => setOpen((value) => !value)}>
-          <span /><span />
-        </button>
+        <div className="header-actions">
+          <LanguageSwitcher locale={locale} />
+          <button ref={buttonRef} className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? t("Menüyü kapat") : t("Menüyü aç")} onClick={() => setOpen((value) => !value)}>
+            <span /><span />
+          </button>
+        </div>
       </div>
       <div ref={menuRef} id="mobile-menu" className={`mobile-menu ${open ? "mobile-menu--open" : ""}`} aria-hidden={!open}>
-        <nav aria-label="Mobil navigasyon">
+        <nav aria-label={t("Mobil navigasyon")}>
           {siteConfig.nav.map((item) => <a key={item.href} href={item.href} tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>{item.label}</a>)}
-          {ticketUrl ? <a className="button" href={ticketUrl} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>Biletini Ayır</a> : null}
+          {ticketUrl ? <a className="button" href={ticketUrl} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>{t("Biletini Ayır")}</a> : null}
         </nav>
       </div>
     </header>

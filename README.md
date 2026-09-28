@@ -16,6 +16,7 @@ Tarayıcıda `http://localhost:3000` adresini açın.
 ```bash
 npm run lint
 npm run build
+npm run check:locales
 ```
 
 Statik çıktı `out/` klasörüne oluşturulur.
@@ -29,6 +30,16 @@ Tüm temel içerik ve bağlantılar `src/content/site.ts` dosyasındadır.
 - Oyuncu fotoğraflarını `public/images/players/{slug}.webp` yoluna ekleyin. Önerilen oran `4:5`, minimum boyut `1200×1500 px`, format WebP. Fotoğraf yoksa monogramlı fallback otomatik gösterilir.
 - Gösteri fotoğrafları `siteConfig.showPhotos` dizisindedir; ilk fotoğraf galeride büyük gösterilir. Her fotoğraf için `public/images/shows/{slug}-{640,1280,2048}.webp` dosyalarını 4:3 oranında hazırlayın; `caption` kısa başlık, `alt` görsel açıklamasıdır. Galeri takvimin ardından yer alır; fotoğraflar tıklanınca tam açılır, ok tuşlarıyla gezilir ve Escape ile kapanır.
 - Partner logoları için `siteConfig` içinde ileride doldurulabilecek bir veri dizisi kullanılmalı; doğrulanmamış logo eklemeyin.
+
+## Dil desteği
+
+- Türkçe: `/` (mevcut ana adres), Almanca: `/de/`, İngilizce: `/en/`.
+- Üst menüdeki TR / DE / EN seçimi mobilde de görünür. Dil değiştirilirken URL’deki bölüm bağlantısı (`#sahneden` gibi) korunur.
+- Sayfa düzeni `src/components/HomePage.tsx` üzerinden üç dilde ortaktır. Marka, oyuncu isimleri, fotoğraflar, iletişim ve bilet bağlantıları aynı kalır. Gösterilerin Türkçe olduğu her dilde belirtilir.
+- Çeviriler `src/content/translations/de.json` ve `en.json` dosyalarındadır. Anahtarlar mevcut Türkçe metinlerdir; Türkçe bir metni değiştirirken iki sözlükteki karşılığını da güncelleyin. Yeni etkinlik başlığı, açıklaması veya galeri metni eklerken çevirilerini de ekleyin.
+- Tarihler dile göre, saatler her zaman Berlin saat diliminde gösterilir. Etkinlik verilerinin kaynağı `src/content/site.ts` olarak kalır.
+- Her dil statik HTML olarak üretilir; doğrudan bağlantılar GitHub Pages üzerinde çalışır. Sayfa dili, başlık/açıklama, canonical, alternatif dil bağlantıları ve sitemap dil sürümlerine göre hazırlanır.
+- `npm run build` sonrasında `npm run check:locales`, çeviri anahtarlarını, dil adreslerini, metadata’yı, bölüm sırasını, görselleri ve bağlantıları doğrular.
 
 ## Yayınlama
 

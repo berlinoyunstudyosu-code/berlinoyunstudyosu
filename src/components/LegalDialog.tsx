@@ -1,8 +1,11 @@
 "use client";
 
+import { translator, type LocaleProps } from "@/content/i18n";
+
 import { useEffect, useRef, useState } from "react";
 
-export function LegalDialog({ label }: { label: "Impressum" | "Datenschutz" }) {
+export function LegalDialog({ label, locale }: { label: "Impressum" | "Datenschutz" } & LocaleProps) {
+  const t = translator(locale);
   const [open, setOpen] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -13,7 +16,7 @@ export function LegalDialog({ label }: { label: "Impressum" | "Datenschutz" }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
   return <>
-    <button className="text-button" type="button" onClick={() => setOpen(true)}>{label}</button>
-    {open ? <div className="dialog-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div className="legal-dialog" role="dialog" aria-modal="true" aria-labelledby={`legal-${label}`}><button ref={closeRef} type="button" className="dialog-close" onClick={() => setOpen(false)} aria-label="Pencereyi kapat">×</button><p className="eyebrow">YASAL</p><h2 id={`legal-${label}`}>{label}</h2><p>Yayın öncesi doldurulacaktır.</p></div></div> : null}
+    <button className="text-button" type="button" onClick={() => setOpen(true)}>{t(label)}</button>
+    {open ? <div className="dialog-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div className="legal-dialog" role="dialog" aria-modal="true" aria-labelledby={`legal-${label}`}><button ref={closeRef} type="button" className="dialog-close" onClick={() => setOpen(false)} aria-label={t("Pencereyi kapat")}>×</button><p className="eyebrow">{t("YASAL")}</p><h2 id={`legal-${label}`}>{t(label)}</h2><p>{t("Yayın öncesi doldurulacaktır.")}</p></div></div> : null}
   </>;
 }

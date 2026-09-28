@@ -1,11 +1,12 @@
+import { languageTags, type Locale } from "@/content/i18n";
 import type { EventItem } from "@/content/site";
 
-export function formatEventDate(date: string) {
-  return new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "long", timeZone: "Europe/Berlin" }).format(new Date(date));
+export function formatEventDate(date: string, locale: Locale = "tr") {
+  return new Intl.DateTimeFormat(languageTags[locale], { day: "numeric", month: "long", timeZone: "Europe/Berlin" }).format(new Date(date));
 }
 
-export function formatEventTime(date: string) {
-  return new Intl.DateTimeFormat("tr-TR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Berlin" }).format(new Date(date));
+export function formatEventTime(date: string, locale: Locale = "tr") {
+  return new Intl.DateTimeFormat(languageTags[locale], { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Berlin" }).format(new Date(date));
 }
 
 export function getUpcomingEvents(events: readonly EventItem[], now = new Date()) {
