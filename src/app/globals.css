@@ -176,6 +176,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .player-content { position: relative; z-index: 2; padding: clamp(20px, 3vw, 32px); background: linear-gradient(0deg, rgba(8,11,13,.98), rgba(8,11,13,.05)); }
 .player-content h3 { margin: 0 0 10px; font-family: var(--display); font-size: clamp(1.45rem, 3vw, 2.2rem); letter-spacing: -.035em; }
 .player-content p { max-width: 560px; margin: 0; color: #c8ccce; font-size: .9rem; line-height: 1.55; }
+.player-card--with-bio { justify-content: flex-start; }
+.player-card--with-bio .player-portrait { position: relative; inset: auto; width: 100%; aspect-ratio: 1600 / 1066; overflow: hidden; flex-shrink: 0; }
+.player-card--with-bio .player-content { flex: 1; background: var(--ink-soft); }
 
 .split-grid { display: grid; gap: 54px; align-items: center; }
 .media-frame { position: relative; min-height: 440px; overflow: hidden; border-radius: 18px; background: #d9c5a6; }

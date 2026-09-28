@@ -15,6 +15,7 @@ export type Player = {
   slug: string;
   initials: string;
   bio: string;
+  showBio?: boolean;
   featured?: boolean;
   image: string;
 };
@@ -89,7 +90,8 @@ export const siteConfig = {
       initials: "PG",
       featured: true,
       image: "/images/players/pinar-goktas.webp",
-      bio: "Oyunculuk deneyimini güçlü karakterler, keskin gözlem ve sahnedeki anlık oyunla buluşturuyor.",
+      bio: "Haliç Konservatuvarı Tiyatro Yüksek Lisans Programı’ndan mezun oldu. Sektörde uzun yıllardır tiyatro, televizyon, sinema ve reklam projelerinde oyunculuk yapıyor. Son yıllarda kendi oyunlarını yazıp sahneliyor ve özellikle komediyle ilgileniyor. Oyunculuk dışında jazz dansı eğitmenliği ve jazz vokalliği yapıyor.",
+      showBio: true,
     },
     {
       name: "Emir Akköse",
