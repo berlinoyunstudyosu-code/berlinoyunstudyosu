@@ -16,6 +16,7 @@ export type Player = {
   initials: string;
   bio: string;
   showBio?: boolean;
+  fullBio?: readonly string[];
   featured?: boolean;
   image: string;
 };
@@ -119,7 +120,20 @@ export const siteConfig = {
       slug: "ahmet-ozer",
       initials: "AO",
       image: "/images/players/ahmet-ozer.webp",
-      bio: "",
+      bio: "1998’den bu yana oyuncu, yönetmen ve eğitmen olarak tiyatro çalışmalarını sürdürüyor. İzmir ve İstanbul’daki çalışmalarının ardından 2020’de Berlin’e taşındı; Ballhaus Prinzenallee, Berliner Ensemble ve Maxim Gorki Theater’da sahne aldı. Tiyatro çalışmalarının yanı sıra sinema ve televizyon projelerinde yer aldı. Sanatsal çalışmalarını Theater Kompanie ve Berlin Oyun Stüdyosu ile sürdürüyor.",
+      showBio: true,
+      fullBio: [
+        "1985 yılında İzmir’de doğdu. Tiyatroya 1998 yılında başladı. 2000 yılında birkaç arkadaşıyla birlikte Tiyatro Kordelya’nın kuruluşunda yer aldı. Tiyatro Kordelya ekibiyle Karşıyaka 1. ve 2. Amatör Tiyatro Günlerini düzenledi.",
+        "2003–2005 yılları arasında Karşıyaka Mavişehir İlköğretim Okulu’nda yaratıcı drama ve tiyatro eğitmeni olarak çalıştı. 2005 yılında Tiyatro Kordelya’nın dağılmasıyla Dönüşüm Atölyesi Oyuncuları’nın kuruluşunda yer aldı. 2004–2008 yılları arasında Dokuz Eylül Üniversitesi Torbalı Meslek Yüksekokulu Tiyatro Topluluğu’nu kurdu ve burada eğitmen ve oyuncu olarak görev yaptı. 2007–2013 yılları arasında Karşıyaka Anadolu Lisesi tiyatro topluluğunda eğitmenlik yaptı.",
+        "2013–2015 yılları arasında İstanbul’da Mekân Artı’da tiyatro çalışmalarını sürdürdü. Bu dönemde oyunculuğun yanı sıra yönetmenlik, eğitmenlik ve sahne arkası çalışmalarında görev aldı; aynı zamanda tiyatro mekânının yönetiminde çalıştı. Müzik alanında da kendisini geliştirerek çeşitli tiyatro oyunlarının müzik tasarımlarını ve uygulamalarını gerçekleştirdi. Yurtiçi ve yurtdışında farklı tiyatro topluluklarıyla çalıştı.",
+        "2015 yılında İzmir’e ve Dönüşüm Atölyesi Oyuncuları’na geri döndü. Karşıyaka Anadolu Lisesi’ndeki eğitmenlik görevini sürdürürken İSEM İzmir Sanat Etkinlikleri Merkezi ve Konak Belediyesi Tiyatro Konak’ta oyuncu olarak görev aldı.",
+        "2018–2019 sezonunda Dönüşüm Atölyesi Oyuncuları ile sahnelediği Cambazın Cenazesi oyunuyla 2. Özdemir Nutku Tiyatro Ödülleri’nde En İyi Yardımcı Erkek Oyuncu ve En İyi Dramaturgi dallarında aday gösterildi. Aynı oyunla 19. Direklerarası Tiyatro Ödülleri’nde Umut Veren Tiyatro Ödülü’ne layık görüldü. 2018–2019 sezonunda Çağdaş Drama Derneği İzmir Şubesi’nden yaratıcı drama liderliği eğitimi aldı ve özel bir okulda drama öğretmeni olarak çalışmaya başladı.",
+        "2020 yılının Kasım ayında Berlin’e taşındı. 2021–2022 sezonunda Ballhaus Prinzenallee’de Migraaaanten adlı oyunda oyuncu olarak yer aldı. 2021 yılında Tiyatro Berlin’in kuruluşunda görev aldı ve 2024 yılına kadar ekip bünyesinde çeşitli oyunlarda yer aldı. 2022 yılında Berlin’de tiyatro pedagojisi eğitimi aldı.",
+        "2023–2025 yılları arasında Berliner Ensemble’da Ich habe die Nacht geträumt adlı oyunda yer aldı. 2023 yılında Maxim Gorki Theater’da “Gezi Festivali” kapsamında Üftade adlı oyunda sahne aldı.",
+        "Sanatsal çalışmalarını 2025 yılından itibaren Theater Kompanie ile 2026 yılından itibaren de Berlin Oyun Stüdyosu ile sürdürmektedir.",
+        "1998 yılından bu yana farklı tiyatro topluluklarında oyuncu, yönetmen ve eğitmen olarak görev aldı; eğitim verdiği kurumlarda tiyatro toplulukları kurdu ve çeşitli oyunlar sahneledi. Rol aldığı oyunlardan bazıları Deli Aklı, Kör Padişah, Yuppi Hayat, Balkon, Kuşlar, Gişe ve Cambazın Cenazesi’dir.",
+        "Kamera önü çalışmalarından bazıları ise Emanet (kısa film), Gece (kısa film), Cinayet (dizi), Beni Böyle Sev (dizi), Sardunya (uzun metraj film) ve Açık Kapılar Ardında (uzun metraj film)dır."
+],
     },
     {
       name: "Elif Oguz",

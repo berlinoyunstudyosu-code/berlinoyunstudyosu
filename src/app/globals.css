@@ -179,6 +179,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .player-card--with-bio { justify-content: flex-start; }
 .player-card--with-bio .player-portrait { position: relative; inset: auto; width: 100%; aspect-ratio: 1600 / 1066; overflow: hidden; flex-shrink: 0; }
 .player-card--with-bio .player-content { flex: 1; background: var(--ink-soft); }
+.player-card--full-bio .player-portrait { aspect-ratio: 4 / 5; }
+.biography-trigger { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; margin-top: 16px; padding: 8px 0; border: 0; color: var(--amber-soft); background: transparent; cursor: pointer; font-size: .9rem; text-align: left; }
+.biography-trigger:hover { text-decoration: underline; text-underline-offset: 4px; }
+.biography-dialog { position: fixed; inset: 0; width: min(760px, calc(100% - 32px)); max-height: calc(100dvh - 40px); margin: auto; padding: 0; border: 1px solid var(--line); border-radius: 18px; color: var(--paper); background: var(--ink-soft); overflow-y: auto; overscroll-behavior: contain; }
+.biography-dialog::backdrop { background: rgba(0,0,0,.82); }
+.biography-toolbar { position: sticky; z-index: 1; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(20px, 4vw, 40px); border-bottom: 1px solid var(--line); background: var(--ink-soft); }
+.biography-toolbar h2 { margin: 0; font-family: var(--display); font-size: clamp(1.3rem, 4vw, 2rem); }
+.biography-toolbar button { flex-shrink: 0; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 4px; color: var(--paper); background: transparent; cursor: pointer; }
+.biography-toolbar button:hover { border-color: var(--amber); }
+.biography-copy { padding: 24px clamp(20px, 4vw, 40px) 36px; }
+.biography-copy p { margin: 0 0 22px; color: #c8ccce; font-size: 1rem; line-height: 1.8; }
+.biography-copy p:last-child { margin-bottom: 0; }
 
 .split-grid { display: grid; gap: 54px; align-items: center; }
 .media-frame { position: relative; min-height: 440px; overflow: hidden; border-radius: 18px; background: #d9c5a6; }
