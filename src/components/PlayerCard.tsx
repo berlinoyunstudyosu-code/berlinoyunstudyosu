@@ -35,7 +35,7 @@ export function PlayerCard({ player, hasImage, locale }: { player: Player; hasIm
       </div>
       <div className="player-content">
         <h3>{player.name}</h3>
-        {player.showBio && player.bio ? <p>{t(player.bio)}</p> : null}
+        {player.showBio && player.bio ? <div className="player-bio">{t(player.bio).split("\n\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div> : null}
         {player.fullBio?.length ? <button ref={triggerRef} className="biography-trigger" type="button" aria-haspopup="dialog" onClick={() => setBioOpen(true)}>{t("Biyografinin tamamı")} <span aria-hidden="true">↗</span></button> : null}
       </div>
     </article>

@@ -99,7 +99,8 @@ export const siteConfig = {
       slug: "emir-akkose",
       initials: "EA",
       image: "/images/players/emir-akkose.webp",
-      bio: "Yüksek enerjisi ve anlık hikâye kurma refleksiyle sahnenin yönünü değiştirmeyi seviyor.",
+      bio: "2014 yılında Selçuk Üniversitesi Sinema-TV Bölümü’nü bitirdikten sonra, “Nasıl daha nitelikli bir işsiz olurum?” diye düşünerek Müjdat Gezen Sanat Merkezi Tiyatro Bölümü’ne girdi. 2016 yılında buradan mezun olunca, “Bu iş böyle olmayacak,” diye düşünerek Almanya’ya göç etti.\n\nTiyatro ve sinema çalışmalarına burada devam edebileceğine ikna olmuşken işlerin hiç de öyle olmadığı ortaya çıktı. Bunun üzerine Çocuk Gelişimi okumaya ve garanti bir mesleğe sahip olmaya karar verdi. Ve yaptı da.\n\nSonra tüm bunların saçmalığından malzeme çıkarıp stand-up komedi yapmaya başladı. Doğaçlama komedi ve stand-up’ta, özgüvensiz ve efendi kimliğiyle dışadönüklere meydan okuyor. Pedagojik yaklaşımlarla bezeli şakalarını, De Niro gibi sahici bir aktör tavrıyla ve bir kayısı işçisi hassasiyetiyle sunuyor.",
+      showBio: true,
     },
     {
       name: "Okan Çetin",
