@@ -17,8 +17,8 @@ export function localizedSite(locale: Locale) {
   return {
     ...siteConfig,
     description: locale === "tr" ? siteConfig.description : locale === "de"
-      ? "Türkische Impro-Comedy in Berlin mit dem Ensemble von Berlin Oyun Stüdyosu: Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic und Kaan Songün. Shows, Firmenevents und Workshops."
-      : "Turkish improv comedy in Berlin with the Berlin Oyun Stüdyosu ensemble: Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic and Kaan Songün. Shows, corporate events and workshops.",
+      ? "Türkische Impro-Comedy in Berlin mit dem Ensemble von Berlin Oyun Stüdyosu: Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Mehmet Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic und Kaan Songün. Shows, Firmenevents und Workshops."
+      : "Turkish improv comedy in Berlin with the Berlin Oyun Stüdyosu ensemble: Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Mehmet Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic and Kaan Songün. Shows, corporate events and workshops.",
     nav: siteConfig.nav.map((item) => ({ ...item, label: t(item.label) })),
     showPhotos: siteConfig.showPhotos.map((photo) => ({ ...photo, caption: t(photo.caption), alt: t(photo.alt) })),
     events: siteConfig.events.map((event) => ({

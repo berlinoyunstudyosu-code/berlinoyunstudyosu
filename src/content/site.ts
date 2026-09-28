@@ -28,7 +28,7 @@ export const siteConfig = {
   name: "Berlin Oyun Stüdyosu",
   siteUrl: "https://berlinoyunstudyosu.com",
   description:
-    "Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic ve Kaan Songün'den oluşan Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
+    "Öner Erkan, Pınar Göktaş, Emir Akköse, Okan Çetin, Yücel Çeşmeli, Ahmet Ozer, Elif Oguz, Mehmet Alperen Derin, Ozgecan Cincik, Yelda Gulsoy, Gizem Kilic ve Kaan Songün'den oluşan Berlin Oyun Stüdyosu ekibiyle Berlin'de Türkçe doğaçlama komedi gösterileri, kurumsal etkinlikler ve workshoplar.",
   instagram: {
     label: "@berlinoyunstudyosu",
     url: "https://www.instagram.com/berlinoyunstudyosu/",
@@ -43,6 +43,18 @@ export const siteConfig = {
     { label: "İletişim", href: "#iletisim" },
   ] satisfies NavItem[],
   events: [
+    {
+      id: "turkce-dogaclama-2026-10-03",
+      date: "2026-10-03T20:00:00+02:00",
+      badge: "03 / EKİ",
+      title: "Berlin'de Türkçe Doğaçlama Komedi",
+      timeLabel: "Cumartesi · 20:00",
+      location: "Kreuzberg · Naunynstraße 63, 10997 Berlin",
+      note: "Biletler bağış usulü",
+      ticketUrl: "https://www.yesticket.org/event/en/berlinde-tuerke-doalama-komedi-03-10-26/",
+      description:
+        "Seyircinin fikirleriyle o anda doğan Türkçe doğaçlama komedi gösterisi. Biletler bağış usulü.",
+    },
     {
       id: "turkce-dogaclama-2026-09-26",
       date: "2026-09-26T20:00:00+02:00",
@@ -144,9 +156,9 @@ export const siteConfig = {
       bio: "",
     },
     {
-      name: "Alperen Derin",
+      name: "Mehmet Alperen Derin",
       slug: "alperen-derin",
-      initials: "AD",
+      initials: "MAD",
       image: "/images/players/alperen-derin.webp",
       bio: "",
     },
