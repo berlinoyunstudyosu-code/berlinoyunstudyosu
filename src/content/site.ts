@@ -152,7 +152,7 @@ export const siteConfig = {
       name: "Elif Oguz",
       slug: "elif-oguz",
       initials: "EO",
-      image: "/images/players/elif-oguz.webp",
+      image: "/images/players/elif-oguz.jpg",
       bio: "",
     },
     {
