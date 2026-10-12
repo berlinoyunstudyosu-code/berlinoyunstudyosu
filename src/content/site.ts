@@ -44,6 +44,18 @@ export const siteConfig = {
   ] satisfies NavItem[],
   events: [
     {
+      id: "turkce-dogaclama-2026-10-17",
+      date: "2026-10-17T20:00:00+02:00",
+      badge: "17 / EKİ",
+      title: "Berlin'de Türkçe Doğaçlama Komedi",
+      timeLabel: "Cumartesi · 20:00",
+      location: "Kreuzberg · Naunynstraße 63, 10997 Berlin",
+      note: "Biletler bağış usulü",
+      ticketUrl: "https://www.yesticket.org/event/en/berlinde-tuerke-doalama-komedi-17-10-26/",
+      description:
+        "Seyircinin fikirleriyle o anda doğan Türkçe doğaçlama komedi gösterisi. Biletler bağış usulü.",
+    },
+    {
       id: "turkce-dogaclama-2026-10-10",
       date: "2026-10-10T20:00:00+02:00",
       badge: "10 / EKİ",
